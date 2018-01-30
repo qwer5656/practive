@@ -4,6 +4,22 @@
 	<title>練習的網頁</title>
 	<link rel="shorcut icon" href="image/mickey.png">
 </head>
+<script type="text/javascript" src="Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	$(function()
+	{
+      $("#texta").focus(function()
+      {
+
+    $(this).parent().css("background-color","#45454580");
+      });
+      $("#texta").blur(function()
+      {
+
+    $(this).parent().css("background-color","transparent");
+      });
+	});
+</script>
 <style>
 li,ul,body
 {
@@ -43,20 +59,32 @@ a{
 {
 		color: #77a0ff;
 }
+ #texta{ 
+ 	background-image:url("image/mickey.png");
+ background-size: 16px 16px;
+ background-position-y:center;
+ background-repeat: no-repeat;
+ background-position-x:10px;
+ }
 </style>
 <body >
 <div style="width:100%;background-color: #20232a;position:fixed;top: 0;left: 0" >
-	<div style="width:90%;margin:0 auto">
+	<div style="width:90%;margin:0 auto;padding-left: 20px;padding-right: 20px;">
 		<div style="display: flex;color:white;height: 60px;align-items: center;">
 			<a href="" style="display: flex;align-items:center;width:calc(100% / 6);font-size: 20px;">
 			<img src="image/facebook.png" style="height: 30px;vertical-align:middle;">
 			<span>Facebook</span>
 			</a>
-			<nav style="width: 60%;height:100%;display: flex;">
+			<nav style="width: 50%;height:100%;display: flex;">
 			<a  href="" class="title">Docs</a>
 			<a  href="" class="title">Tutorial</a>
 			<a  href="" class="title">Community</a>
 			<a  href="" class="title">Blog</a></nav>
+			<form >
+			<span   style="display:inline-block;border-radius: 5px"> 
+			<input  placeholder="search file" id="texta" type="text" style="background-color: transparent;border: 0;font-size: 14px;padding: 5px 5px 5px 29px;color: white;width: 120px;outline:none;" />	
+			</span>
+			</form> 
 			<div>
 			<a class="version" href="" style="font-size: 14px;padding: 5px 10px">v16.20.0</a>
 			<a class="version" href="" style="font-size: 14px;padding: 5px 10px">GitHub</a>
