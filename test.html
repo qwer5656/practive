@@ -2,8 +2,67 @@
 <html>
 <head>
 	<title>練習的網頁</title>
+	<link rel="shorcut icon" href="image/mickey.png">
 </head>
-<body>
-hello world
+<style>
+li,ul,body
+{
+padding: 0;
+margin: 0;
+}	
+ul
+{
+  list-style:none;
+}
+ul li
+{
+	float: left;
+
+}
+.title
+{
+	display: flex;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+
+}
+a{
+	color: white;
+	text-decoration: none;
+
+}
+.title:hover
+{
+	color: #77a0ff;
+	border-bottom: 2px solid blue;
+}
+.version:hover
+{
+		color: #77a0ff;
+}
+</style>
+<body >
+<div style="width:100%;background-color: #20232a;position:fixed;top: 0;left: 0" >
+	<div style="width:90%;margin:0 auto">
+		<div style="display: flex;color:white;height: 60px;align-items: center;">
+			<a href="" style="display: flex;align-items:center;width:calc(100% / 6);font-size: 20px;">
+			<img src="image/facebook.png" style="height: 30px;vertical-align:middle;">
+			<span>Facebook</span>
+			</a>
+			<nav style="width: 60%;height:100%;display: flex;">
+			<a  href="" class="title">Docs</a>
+			<a  href="" class="title">Tutorial</a>
+			<a  href="" class="title">Community</a>
+			<a  href="" class="title">Blog</a></nav>
+			<div>
+			<a class="version" href="" style="font-size: 14px;padding: 5px 10px">v16.20.0</a>
+			<a class="version" href="" style="font-size: 14px;padding: 5px 10px">GitHub</a>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
