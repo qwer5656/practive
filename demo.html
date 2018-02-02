@@ -91,6 +91,7 @@
 <body>
 <div class="camera">
 		<div class="space">
+		beta:<span id="demo"></span>
 			<div class="box1">1</div>
 			
 		</div>
@@ -115,8 +116,9 @@
         space[0].style.webkitTransform = 'translatex('+beta+'px)';
         space[0].style.transform = 'translatex('+beta+'px)';
         space[0].style.mozTransform = 'translatex('+beta+'px)';
-
+       document.getElementById("demo").innerText=beta;
 	      }, false);
+
 	}else{
 	  document.querySelector('body').innerHTML = '你的瀏覽器不支援喔';
 	}
