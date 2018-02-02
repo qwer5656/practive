@@ -90,11 +90,7 @@
 <div class="camera">
 		<div class="space">
 			<div class="box1">1</div>
-			<div class="box2">2</div>
-			<div class="box3">3</div>
-			<div class="box4">4</div>
-			<div class="box5">5</div>
-			<div class="box6">6</div>
+			
 		</div>
 	</div>
 	<script>
@@ -105,10 +101,18 @@
       var alpha = event.alpha,
       	beta = event.beta,
 		 gamma = event.gamma;
-      
-        space[0].style.webkitTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
-        space[0].style.transform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
-        space[0].style.mozTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
+		 if(beta>=186)
+		 {
+		 	beta=186;
+		 }
+		 else if(beta<=-86)
+		 {
+               beta=-86;
+		 }
+     
+        space[0].style.webkitTransform = 'translatex('+beta+'px)';
+        space[0].style.transform = 'translatex('+beta+'px)';
+        space[0].style.mozTransform = 'translatex('+beta+'px)';
 
 	      }, false);
 	}else{
